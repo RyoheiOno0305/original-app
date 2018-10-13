@@ -1,0 +1,36 @@
+<ul class="media-list">
+  <% posts.each do |post| %>
+    <li class="media　col-md-2">
+      <div class="media-body">
+        <div>
+          <p>
+            <%= image_tag(post.picture_url) if post.picture.present? %>
+          </p>
+        </div>
+        
+        <div>
+          <p><%= post.title%></p>
+        </div>
+        
+        <div>
+          <p><%= post.content %></p>
+        </div>
+        
+      </div>
+        <div class="media-left">
+          <img class="media-object img-rounded" src="<%= gravatar_url(post.user, { size: 50 }) %>" alt="">
+        </div>
+        <div>
+          <%= link_to post.user.name, user_path(post.user) %> <span class="text-muted"> </span>
+        </div>
+        <div>
+          <% if current_user == post.user %>
+            <%= link_to "Delete", post, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
+          <% end %>
+        </div>
+    </li>
+  <% end %>
+  <%= paginate posts %>
+</ul>
+
+<div class=></div>
