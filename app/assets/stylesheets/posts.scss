@@ -1,2 +1,58 @@
 @charset "UTF-8";
 
+.clearfix::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+#container2{
+	position:relative;
+	margin-top:40px;
+}
+
+.icon2{
+	float:left;
+}
+
+.user-name2{
+	margin-left:10px;
+	float:left;
+}
+
+.picture2{
+	width:40px;
+}
+
+
+.panel2{
+	width:400px;
+	display:inline-block;
+	position:absolute;
+	height:200px;
+	top:50px;
+	left:200px;
+	border:solid 1px #C0C0C0;
+}
+
+.panel3{
+	width:400px;
+	display:inline-block;
+	position:absolute;
+	height:200px;
+	top:0;
+	left:200px;
+	border:solid 1px #C0C0C0;
+}
+
+.button2{
+	float:right;
+	margin-top:45px;
+}
+
+.delete{
+	float:right;
+	position:absolute;
+	top:10px;
+	left:320px;
+}

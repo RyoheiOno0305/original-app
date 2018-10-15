@@ -7,11 +7,14 @@ class ApplicationController < ActionController::Base
   
   def require_user_logged_in
   	unless logged_in?
-  		redirect_to root_url
+  		redirect_to login_url
   	end
   end
   
   def counts(user)
     @count_posts = user.posts.count
+    @count_followings = user.followings.count
+    @count_followers = user.followers.count
+    @count_favorites = user.favorites.count
   end
 end

@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
+  get 'favorites/create'
 
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
+  get 'favorites/destroy'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
   
@@ -15,6 +12,17 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   get 'signup' , to: 'users#new'
-  resources :users, only:[:index, :show, :new, :create]
+  resources :users, only:[:index, :show, :new, :create] do
+    member do
+      get :followings
+      get :followers
+      get :favorites
+    end
+    collection do
+      get :search
+    end
+  end
   resources :posts
+  resources :relationships, only: [:create, :destroy]
+  resources :favorites, only: [:create, :destroy]
 end
