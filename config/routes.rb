@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'items/new'
+
   get 'rankings/follower'
 
   get 'favorites/create'
@@ -28,4 +30,5 @@ Rails.application.routes.draw do
   resources :posts
   resources :relationships, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy]
+  resources :items, only: [:new]
 end
