@@ -6,7 +6,15 @@ class PictureUploader < CarrierWave::Uploader::Base
   process :resize_to_fill => [150,200]
 
   # Choose what kind of storage to use for this uploader:
-  storage :file
+  if Rails.env.production?
+    include Cloudinary::CarrierWave
+  else
+    storage :file
+  end
+  
+  def public_id
+    model.id
+  end
   # storage :fog
   process :convert => 'jpg'
 
