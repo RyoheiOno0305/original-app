@@ -1,0 +1,113 @@
+/* line 3, /home/ec2-user/environment/wear/app/assets/stylesheets/layouts.scss */
+.alert {
+  margin-top: 50px;
+}
+/* line 3, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 9, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+#container2 {
+  position: relative;
+  margin-top: 40px;
+}
+
+/* line 14, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.icon2 {
+  float: left;
+}
+
+/* line 18, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.user-name2 {
+  margin-left: 10px;
+  float: left;
+}
+
+/* line 23, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.picture2 {
+  width: 40px;
+}
+
+/* line 28, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.panel2 {
+  width: 400px;
+  display: inline-block;
+  position: absolute;
+  height: 200px;
+  top: 55px;
+  left: 200px;
+  border: solid 1px #C0C0C0;
+}
+
+/* line 38, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.panel3 {
+  width: 400px;
+  display: inline-block;
+  position: absolute;
+  height: 200px;
+  top: 0;
+  left: 200px;
+  border: solid 1px #C0C0C0;
+}
+
+/* line 48, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.button2 {
+  float: right;
+  margin-top: 45px;
+}
+
+/* line 53, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.delete {
+  float: right;
+  position: absolute;
+  top: 10px;
+  left: 320px;
+}
+
+/* line 60, /home/ec2-user/environment/wear/app/assets/stylesheets/posts.scss */
+.icon2 {
+  margin-bottom: 5px;
+}
+/* line 3, /home/ec2-user/environment/wear/app/assets/stylesheets/relationships.scss */
+.followers_ranking {
+  position: absolute;
+  top: 50px;
+  width: 200px;
+  margin-right: 0px;
+}
+
+/* line 10, /home/ec2-user/environment/wear/app/assets/stylesheets/relationships.scss */
+.followers_ranking h5 {
+  margin: 0;
+}
+/* line 3, /home/ec2-user/environment/wear/app/assets/stylesheets/sessions.scss */
+.login {
+  padding-top: 150px;
+}
+/* line 3, /home/ec2-user/environment/wear/app/assets/stylesheets/users.scss */
+.signup {
+  padding-top: 100px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+
+
+body{
+	background-image:url();
+}
