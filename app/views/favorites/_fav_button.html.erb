@@ -1,11 +1,13 @@
-<% if current_user.faving?(post) %>
-  <%= form_for(current_user.favorites.find_by(post_id: post.id), html: { method: :delete }) do |f| %>
-    <%= hidden_field_tag :post_id,post.id %>
-    <%= f.submit 'お気に入りを解除', class: 'btn btn-danger btn-block' %>
-  <% end %>
-<% else %>
-  <%= form_for(current_user.favorites.build) do |f| %>
-    <%= hidden_field_tag :post_id, post.id %>
-    <%= f.submit 'お気に入り', class: 'btn btn-primary btn-block' %>
+<% if logged_in? %>
+  <% if current_user.faving?(post) %>
+    <%= form_for(current_user.favorites.find_by(post_id: post.id), html: { method: :delete }) do |f| %>
+      <%= hidden_field_tag :post_id, post.id %>
+      <%= f.submit 'お気に入りを解除', class: 'btn btn-danger btn-block' %>
+    <% end %>
+  <% else %>
+    <%= form_for(current_user.favorites.build) do |f| %>
+      <%= hidden_field_tag :post_id, post.id %>
+      <%= f.submit 'お気に入り', class: 'btn btn-primary btn-block' %>
+    <% end %>
   <% end %>
 <% end %>

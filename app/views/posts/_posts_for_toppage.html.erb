@@ -1,7 +1,7 @@
 <% posts.each do |post| %>
-    <div id="container2" class="clearfix col-md-6 col-md-offset-3">
+    <div id="container2" class="clearfix col-md-6 col-md-offset-4 panel-default">
       <div class="icon2">
-        <img class="media-object img-rounded" src="<%= gravatar_url(post.user, options = { size: 50 }) %>" alt="">
+        <img class="media-object img-rounded " src="<%= gravatar_url(post.user, options = { size: 50 }) %>" alt="">
       </div>
       <div class="user-name2"><h4><%= link_to post.user.name, user_path(post.user) %></h4></div>
       <div class="post-content">
@@ -18,7 +18,7 @@
           <div class="panel-body"><p><%= post.content %></p></div>
           <div class="button2">
             <p><%= render 'favorites/fav_button', post: post %></p>
-        </div>
+          </div>
         </div>
       </div>
     </div>

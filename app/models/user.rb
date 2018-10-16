@@ -26,8 +26,8 @@ class User < ApplicationRecord
     relationship.destroy if relationship
   end
 
-  def following?(post_id)
-    self.followings.include?(post_id)
+  def following?(user_id)
+    self.followings.include?(user_id)
   end
   
   def fav(post_id)

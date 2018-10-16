@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'rankings/follower'
+
   get 'favorites/create'
 
   get 'favorites/destroy'
@@ -22,6 +24,7 @@ Rails.application.routes.draw do
       get :search
     end
   end
+  
   resources :posts
   resources :relationships, only: [:create, :destroy]
   resources :favorites, only: [:create, :destroy]

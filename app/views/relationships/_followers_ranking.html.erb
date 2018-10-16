@@ -1,0 +1,24 @@
+<div class= 'panel panel-success followers_ranking '>
+<h5 class = 'panel-heading'>ユーザーランキング</h5>
+<% if users.any? %>
+  <ul class="media-list panel-body">
+    <% users.each_with_index do |user,index| %>
+      <li class="media">
+        <%= index+1 %>位: <%= @followers_ranking[user.id] %>
+        <div class="media-left">
+          <img class="media-object img-rounded" src="<%= gravatar_url(user, { size: 50 }) %>" alt="">
+        </div>
+        <div class="media-body">
+          <div>
+            <%= user.name %>
+          </div>
+          <div>
+            <p><%= link_to 'View profile', user_path(user) %></p>
+          </div>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+  
+<% end %>
+</div>
