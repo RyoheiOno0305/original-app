@@ -30,7 +30,7 @@
 	display:inline-block;
 	position:absolute;
 	height:200px;
-	top:55px;
+	top:70px;
 	left:200px;
 	border:solid 1px #C0C0C0;
 }
@@ -40,7 +40,7 @@
 	display:inline-block;
 	position:absolute;
 	height:200px;
-	top:0;
+	top:15px;
 	left:200px;
 	border:solid 1px #C0C0C0;
 }
@@ -59,4 +59,17 @@
 
 .icon2{
 	margin-bottom:5px;
+}
+
+.post-background{
+	display:inline;
+	padding-left:150px;
+}
+
+.intro-box{
+	position:relative;
+}
+.intro{
+	position:absolute;
+	top:50px;
 }
