@@ -57,6 +57,9 @@ body{
   overflow: hidden;
 }
 
-
+.flash_messages{
+  position:fixed;
+  z-index: 10;
+}
 
 
