@@ -23,6 +23,8 @@
       <li class="<%= 'active' if current_page?(followings_user_path(@user)) %>"><%= link_to followings_user_path(@user) do %>Followings <span class="badge"><%= @count_followings %></span><% end %></li>
       <li class="<%= 'active' if current_page?(followers_user_path(@user)) %>"><%= link_to followers_user_path(@user) do %>Followers <span class="badge"><%= @count_followers %></span><% end %></li>
       <li class="<%= 'active' if current_page?(favorites_user_path(@user)) %>"><%= link_to favorites_user_path(@user) do %>Favorites <span class="badge"><%= @count_favorites %></span><% end %></li>
+      <li class="<%= 'active' if current_page?(wants_user_path(@user)) %>"><%= link_to wants_user_path(@user) do %>Wants <span class="badge"><%= @count_wants %></span><% end %></li>
+      <li class="<%= 'active' if current_page?(has_user_path(@user)) %>"><%= link_to has_user_path(@user) do %>Has <span class="badge"><%= @count_has %></span><% end %></li>
     </ul>
     <%= render 'users', users: @followings %>
   </div>

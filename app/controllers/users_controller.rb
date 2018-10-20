@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
-  before_action :require_user_logged_in, only:[:index, :show, :followings, :followers, :favorites]
+  before_action :require_user_logged_in, only:[:index, :show, :followings, :followers, :favorites ]
+  before_action :correct_user, only:[:edit]
   
   def index
     @users = User.all.page(params[:page])
@@ -60,7 +61,17 @@ class UsersController < ApplicationController
     counts(@user)
   end
   
+  def wants
+    @user = User.find(params[:id])
+    @wants = @user.want_items.page(params[:page])
+    counts(@user)
+  end
   
+  def has
+    @user = User.find(params[:id])
+    @has = @user.have_items.page(params[:page])
+    counts(@user)
+  end
   
   private
   

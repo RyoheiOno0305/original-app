@@ -7,17 +7,14 @@
             <div class="panel-heading text-center">
               <img src="<%= item.image_url %>" alt="" >
             </div>
-            <div class="panel-body ">
-              <p class="item-title"><%= item.name %></p>
+            <div class="panel-body">
+              <p class="item-title-user"><%= item.name %></p>
             </div>
-            
+            <% if logged_in? %>
             <div class="buttons text-center">
-              <% if logged_in? %>
-                <%= render 'ownerships/want_button', item: item %>
-                <%= render 'ownerships/have_button', item: item %>
-              <% end %>
+              <%= render 'ownerships/want_button', item: item %>
             </div>
-            
+            <% end %>
           </div>
         </div>
       </div>

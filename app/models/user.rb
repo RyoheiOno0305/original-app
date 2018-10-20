@@ -14,6 +14,12 @@ class User < ApplicationRecord
   has_many :followers, through: :reverses_of_relationship, source: :user
   has_many :favorites
   has_many :favs, through: :favorites, source: :post
+  has_many :ownerships
+  has_many :items, through: :ownerships
+  has_many :wants
+  has_many :want_items, through: :wants , class_name:'Item', source: :item
+  has_many :has, class_name: 'Have'
+  has_many :have_items, through: :has, class_name: 'Item', source: :item
 
   
   def follow(other_user)
@@ -42,5 +48,31 @@ class User < ApplicationRecord
 
   def faving?(post_id)
     self.favs.include?(post_id)
+  end
+  
+  def want(item)
+    self.wants.find_or_create_by(item_id: item.id)
+  end
+
+  def unwant(item)
+    want = self.wants.find_by(item_id: item.id)
+    want.destroy if want
+  end
+
+  def want?(item)
+    self.want_items.include?(item)
+  end
+  
+  def have(item)
+    self.has.find_or_create_by(item_id: item.id)
+  end
+
+  def unhave(item)
+    have = self.has.find_by(item_id: item.id)
+    have.destroy if have
+  end
+
+  def have?(item)
+    self.have_items.include?(item)
   end
 end

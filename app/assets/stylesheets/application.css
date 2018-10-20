@@ -34,13 +34,14 @@ body{
 	margin-top: 60px;
 }
 
+/* search */
 .search {
   margin-bottom: 20px;
 }
 
 /* item */
 .item .panel-body {
-  height: 70px;
+  height: 100px;
 }
 .item .panel-heading {
   height: 250px;
@@ -53,13 +54,28 @@ body{
   /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 4;
   overflow: hidden;
 }
 
-.flash_messages{
-  position:fixed;
-  z-index: 10;
+.item .buttons form {
+  display:inline-block;
+  margin: 0 5px;
 }
+.item-panel{
+  position:relative;
+}
+
+.item-title-user {
+  /* 文の行数を2行に保ち、最後に ... を追加するスタイル */
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+
+
+
 
 
