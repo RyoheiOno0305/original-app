@@ -6,13 +6,7 @@
       </div>
       <div class="panel-body">
         <img class="media-object img-rounded img-responsive" src="<%= gravatar_url(@user, { size: 200 }) %>" alt="">
-        <div class="intro">
-          <h4>自己紹介</h4>
-          <% if current_user == @user %>
-              <p class="edit"><%= link_to "編集", edit_user_path, class: 'btn btn-primary btn-xs' %></p>
-          <% end %>
-          <%= @user.intro %>
-        </div>
+        <%= render 'users/intro', user: @user %>
       </div>
     </div>
     <%= render 'relationships/follow_button', user: @user %>

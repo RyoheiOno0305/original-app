@@ -1,8 +1,12 @@
+
 <div class="intro-box">
 <h1 class="intro-title col-md-9">自己紹介編集ページ</h1>
 
 <div class="intro col-md-offset-1">
 <%= form_for(user) do |f| %>
+  <div class="error_messages">
+    <%= render 'layouts/error_messages', model: f.object%>
+  </div>
   <%= f.label :intro, '自己紹介' %>
   <%= f.text_area :intro ,  size: "30x10", class: "form-control"%>
 

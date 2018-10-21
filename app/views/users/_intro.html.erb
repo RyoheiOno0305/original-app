@@ -1,0 +1,9 @@
+<div class="intro">
+  <h4>自己紹介</h4>
+  <% if current_user == user %>
+      <p class="edit"><%= link_to "編集", edit_user_path, class: 'btn btn-primary btn-xs' %></p>
+  <% end %>
+  <div class="user-intro" style="word-break: break-all;">
+    <%= user.intro %>
+  </div>
+</div>

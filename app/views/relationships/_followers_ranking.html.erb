@@ -1,10 +1,10 @@
 <div class= 'panel panel-success followers_ranking '>
-<h5 class = 'panel-heading'>ユーザーランキング</h5>
+<h5 class = 'panel-heading'>フォロワーランキング</h5>
 <% if users.any? %>
   <ul class="media-list panel-body">
     <% users.each_with_index do |user,index| %>
       <li class="media">
-        <%= index+1 %>位: <%= @followers_ranking[user.id] %>
+        <%= index+1 %>位:<span class="glyphicon glyphicon-user" aria-hidden="true"></span> <%= @followers_ranking[user.id] %>人
         <div class="media-left">
           <img class="media-object img-rounded" src="<%= gravatar_url(user, { size: 50 }) %>" alt="">
         </div>

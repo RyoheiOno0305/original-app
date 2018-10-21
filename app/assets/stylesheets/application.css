@@ -79,6 +79,15 @@ body{
   z-index:10;
 }
 
+.error_messages{
+  z-index: 10;
+}
+.user-intro{
+  overflow:auto;
+  width:500px;
+  height:190px;
+  word-wrap:normal;
+}
 
 
 
